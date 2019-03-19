@@ -139,6 +139,7 @@ before_script:
   - popd
 
 script:
+  - ${KDIR}/scripts/checkpatch.pl --no-tree --git HEAD~10..HEAD || true
   - scripts/prepare-kernel.sh --arch=${ARCH} --linux=${KDIR}
   - pushd ${KDIR}
   - make -j $(nproc) olddefconfig
