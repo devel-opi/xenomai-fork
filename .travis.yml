@@ -136,6 +136,12 @@ before_script:
   - ./scripts/config -e XENO_DRIVERS_SPI_SUN6I
   - ./scripts/config -e XENO_DRIVERS_SPI_DEBUG
 
+# PPC settings
+  - ./scripts/config -e XENO_DRIVERS_NET_DRV_FCC_ENET
+  - ./scripts/config -e XENO_DRIVERS_NET_DRV_FEC_ENET
+  - ./scripts/config -e XENO_DRIVERS_NET_DRV_SCC_ENET
+  - ./scripts/config -e XENO_DRIVERS_NET_DRV_MPC52XX_FEC
+
   - popd
 
 script:
